@@ -1,0 +1,105 @@
+:root{
+--morado:#6b188a;
+--sky:#0000ff;
+--azuldod:#4169e1;
+--blanco:#000000 ;
+--fuente:'Quicksand',sans-serif;
+--azul:#4682b4;
+
+}
+html{
+    box-sizing: border-box;
+}
+*,::after,*::before{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuente);
+    background-color: var(--morado);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.contenedor{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+}
+.imagen-formulario{
+    background-image: url('../imagenes/med.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+    flex: 0 0 calc(60%);
+    position: relative;
+}
+.imagen-formulario::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(182, 143, 243, 0.5), rgba(69, 19, 116, 0.308));
+}
+@media(min-width:768px){
+    .imagen-formulario{
+        height: auto;
+        background-position: right;
+    }
+}
+@media(min-width:768px){
+    .contenedor-formulario{
+        display: flex;
+        background-position: center;
+    }
+}
+.formulario{
+    padding: 50px;
+    background-color: var(--azuldod);
+}
+.texto-formulario h2,.input label, .password-olvidada a,.texto-formulario p{
+    color: var(--blanco);
+}
+.texto-formulario h2{
+    font-size: 50px;
+    text-align: center;
+}
+.texto-formulario p{
+    font-size: 22px;
+    text-align: center;
+}
+.input label{
+display: block;
+font-size: 22px;
+font-weight: bold;
+margin: 20px 0;
+}
+.input input{
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 5px;
+    outline: none;
+}
+.password-olvidada a{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 22px;
+}
+.input input[type="submit"]{
+    background-color: var(--azul);
+    color: var(--blanco);
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    transition: background-color .3s ease-in-out;
+}
+.input input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: var(--azul);
+}
+.fuente{
+    font-family: fantasy;
+    color:black;
+}

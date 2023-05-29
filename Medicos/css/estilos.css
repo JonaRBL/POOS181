@@ -1,0 +1,19 @@
+body {
+    background-image: url("../imagenes/M.jpg");
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    background-color:cornflowerblue;
+}
+
+.container{
+    top:10vh;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0px 0px 30px 0px #2cd3c0;
+}
+.fuente{
+    font-family: fantasy;
+    color:black;
+}

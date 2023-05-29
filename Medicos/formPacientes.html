@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head> <!--encabazado para enlace a documentos-->
+  <meta charset="UTF-8">
+  <title> Registro de Pacientes </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilos2.css" />
+
+</head>
+
+<body ><!--elementos visibles del HTML-->
+
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand fuente" href="#">
+        <img  src="../Medicos/imagenes/L1.png" alt="" width="35" height="35" class="d-inline-block align-text-top">
+        Interfaz Inicial
+      </a>
+      <ul class="nav justify-content-end">
+        <li class="container-fluid">
+          <a class="navbar-brand fuente" href="index.html">
+            <img  src="../Medicos/imagenes/C1.png" alt="" width="35" height="35" class="d-inline-block align-text-top">
+            Cerrar Sesión
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+       
+  <h1 class="text-center mt-5 fuente">--Registro de Pacientes--</h1>
+    <form class="container" style="width: 44rem;">
+
+      <div>
+        <a class="btn btn-primary fuente" href="#">Volver</a>
+      </div>
+      <br>
+      <div class="card col-sm-12" style="width: 40rem;">
+        <div class="card-body" >
+          <p class="text-center">Datos del medico</p>
+          <div class="mb-2 text-center fuente"> 
+            <label>Nombre completo del medico:</label>
+            <input class="form-control" style="width: 600px;">
+          </div>
+          <div class="mb-2 text-center fuente">
+            <label>Cedula del medico:</label>
+            <input class="form-control" style="width: 600px;">
+          </div>
+          <p class="text-center">Datos del paciente</p>
+          <div class="mb-2 text-center fuente">
+            <label> Nombre completo del paciente:</label>
+            <input class="form-control" style="width: 600px;">
+          </div>
+          <div class="mb-2 text-center fuente">  
+            <label> Fecha de nacimiento:</label>
+            <input class="form-control" style="width: 600px;" placeholder="dd-mm-aaaa">
+          </div>
+          <div class="mb-2 text-center fuente"> 
+            <label>Tiene Alergias:</label>
+            <select id="lang">
+              <option>si</option>
+              <option>no</option>
+            </select>
+            <br>
+            <label>En caso de haber colocado si, ingresar sus alergias</label>
+            <input class="form-control" style="width: 600px;">
+          </div>
+          <div class="mb-2 text-center fuente">
+            <label>Padece enfermedades cronicas:</label>
+            <select id="lang">
+              <option>si</option>
+              <option>no</option>
+            </select>
+            <br>
+            <label>Cuales:</label>
+            <input class="form-control" style="width: 600px;">
+          </div>
+          <div class="mb-2 text-center fuente">
+            <label>Antecedente familiares:</label>
+            <input class="form-control" style="width: 600px;" placeholder="N/A si no los hay">
+          </div>
+          <br>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary fuente"> Guardar Registro</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
