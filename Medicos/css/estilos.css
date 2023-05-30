@@ -17,3 +17,33 @@ body {
     font-family: fantasy;
     color:black;
 }
+.col1 {
+    background: dodgerblue;
+    width: 35%;
+ }
+ .col2 {
+    border: white;
+    background: dodgerblue;
+    width: 55%;
+    text-align: center;
+ }
+ .row {
+   display: flex;
+   width: 80%;
+ }
+ .contenedor{
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+}
+.alinearCentro { 
+    position: fixed;
+    top: 15%;
+    left: 15%;
+}
+.alin{
+    align-items: center;
+}
+form  { display: table;      }
+p     { display: table-row;  }
+input { display: table-cell; }
