@@ -45,7 +45,36 @@ body {
 
 .fuente{
     font-family: fantasy;
-    color:white;
+    color:black;
+}
+.fondo{
+    background-color: blueviolet;
+    border-color: black;
+    border: 1cm;
+}
+.alin{
+    align-items: center;
+}
+table{
+    width: 100%;
+}
+  
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+  
+th, td {
+    padding: 1px;
+}
+  
+th{
+    text-align: center;
+}
+.alinearCentro { 
+    position: fixed;
+    top: 10%;
+    left: 7%;
 }
 
 
