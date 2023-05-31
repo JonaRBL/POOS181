@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title> Registro de Medicos </title>
+  <title> Actualizar datos de Medicos </title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css/estilos.css" />
 
@@ -32,9 +32,9 @@
     <div class="contenedor alinearCentro">
         <div class="row">
             <div class="col1">
-              <h1 class="text-center mt-5 fuente">Registro</h1>
-              <h1 class="text-center  fuente">de</h1>
-              <h1 class="text-center  fuente">Medicos</h1>
+              <h1 class="text-center mt-5 fuente">Actualización</h1>
+              <h1 class="text-center  fuente">de los</h1>
+              <h1 class="text-center  fuente">datos del Medico</h1>
               <div class="text-center">
                 <a class="btn btn-primary fuente" href="#">Volver</a>
               </div>
@@ -44,43 +44,49 @@
                 <br>
                 <div class="text-center fuente"> 
                   <p>
-                    <label>Nombre completo:</label>
+                    <label>Ingresa el ID del medico:</label>
+                    <input class="form-control"  style="width: 500px; height: 30px;">
+                  </p>
+                </div>
+                <div class="text-center fuente"> 
+                  <p>
+                    <label>Ingresa el nombre completo :</label>
                     <input class="form-control"  style="width: 500px; height: 30px;">
                   </p>
                 </div>
                 <div class="text-center fuente">
                   <p>
-                    <label>Cedula:</label>
+                    <label>Ingresa la cedula:</label>
                     <input class="form-control" style="width: 500px; height: 30px;">
                   </p>
                 </div>
                 <div class="text-center fuente">
                   <p>
-                    <label> RFC:</label>
+                    <label>Ingresa el RFC:</label>
                     <input class="form-control" style="width: 500px; height: 30px;">
                   </p>
                 </div>
                 <div class="text-center fuente">
                   <p>
-                    <label> Correo electronico:</label>
+                    <label>Ingresa el correo electronico:</label>
                     <input class="form-control" style="width: 500px; height: 30px;">
                   </p>
                 </div>
                 <div class="text-center fuente"> 
                   <p>
-                    <label>Contraseña:</label>
+                    <label>Ingresa la contraseña:</label>
                     <input class="form-control" style="width: 500px; height: 30px;" type="password">
                   </p>
                 </div>
                 <div class="text-center fuente">
                   <p>
-                    <label>Confirma tu contraseña:</label>
+                    <label>Confirma la contraseña:</label>
                     <input class="form-control" style="width: 500px; height: 30px;" type="password">
                   </p>
                 </div>
                 <br>
                 <div class="text-center fuente">
-                  <label>Rol</label>
+                  <label>Rol nuevo</label>
                   <select id="lang">
                     <option>Medico general</option>
                     <option>Medico administrador</option>
@@ -88,9 +94,10 @@
                 </div>  
                 <br>
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary fuente"> Guardar Registro</button>
+                  <button type="submit" class="btn btn-primary fuente"> Guardar Cambios</button>
                 </div>
                 <br>
+                <p class="fuente">NO DEJAR NINGÚN CAMPO VACIO*</p>
               </form>
             </div>
         </div>
