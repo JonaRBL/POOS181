@@ -1,0 +1,18 @@
+.alinearCentro { 
+    position: fixed;
+    top: 30%;
+    left: 28%;
+}
+
+.fuente{
+    color: #201976;
+    text-align: center;
+}
+
+.fuente2{
+    color:black;
+    text-align: center;
+    background-color: blueviolet;
+    font-family: fantasy;
+
+}
