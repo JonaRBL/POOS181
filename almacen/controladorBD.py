@@ -79,7 +79,7 @@ class controladorBD:
                 clas = clasent
                 mar = marent
                 prec = precent
-                sqlActuali = "UPDATE TBbebidas SET nombre=?, clasificacion=?, marca=? precio=? WHERE id=?"
+                sqlActuali = "UPDATE TBbebidas SET nombre=?, clasificacion=?, marca=?, precio=? WHERE id=?"
                 
                 cursor.execute(sqlActuali, [nom, clas, mar, prec, id])
                 proAct = cursor.fetchall()

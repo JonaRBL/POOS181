@@ -17,8 +17,8 @@ def ejecutaConsulta():
         tabla.insert("", tk.END, text = "", values = beb)
 
 def ejecutaActualizar():
-    rsUsuario = controlador.consultaProducto(varID.get())
-    if(rsUsuario):
+    rsBebida = controlador.consultaProducto(varID.get())
+    if(rsBebida):
         controlador.actualizarProducto(varID.get(), varaNom.get(), varaClas.get(), varaMar.get(), varaPrec.get())
     else:
         messagebox.showinfo("No encontrado", "Bebida no registrada en la BD")
