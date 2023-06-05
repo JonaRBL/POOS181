@@ -113,5 +113,64 @@ class controladorBD:
             
             except sqlite3.OperationalError:
                 print("Error de Consulta")
+    
+    def cantidadBebidaMarca(self, marca):
+        conx = self.conexionBD()
         
+        if (marca == ""):
+            messagebox.showwarning("Cuidado", "Campo vacio, escribe uno valido")
+            conx.close()
+        else:
+            try:
+                cursor = conx.cursor()
+                sqlCantidad = "SELECT COUNT(*) FROM TBbebidas WHERE marca =?"
+                
+                cursor.execute(sqlCantidad, [marca])
+                Resultbebida = cursor.fetchall()
+                conx.close()
+                
+                return Resultbebida
+            
+            except sqlite3.OperationalError:
+                print("Error de Consulta")    
+    
+    def cantidadBebidaClas(self, clasi):
+        conx = self.conexionBD()
         
+        if (clasi == ""):
+            messagebox.showwarning("Cuidado", "Campo vacio, escribe uno valido")
+            conx.close()
+        else:
+            try:
+                cursor = conx.cursor()
+                sqlCantidad = "SELECT COUNT(*) FROM TBbebidas WHERE clasificacion =?"
+                
+                cursor.execute(sqlCantidad, [clasi])
+                Resultbebida = cursor.fetchall()
+                conx.close()
+                
+                return Resultbebida
+            
+            except sqlite3.OperationalError:
+                print("Error de Consulta")    
+        
+    def Precio(self):
+        conx = self.conexionBD()
+        
+        try:
+                cursor = conx.cursor()
+                sqlPrecio = "SELECT precio FROM TBbebidas"
+                
+                cursor.execute(sqlPrecio)
+                Resultbebida = cursor.fetchall()
+                
+                cantidaBebi = len(Resultbebida)
+                sumPrecios = sum([precio[0] for precio in Resultbebida])
+                precioProm = sumPrecios / cantidaBebi
+                
+                conx.close()
+                
+                return precioProm
+            
+        except sqlite3.OperationalError:
+                print("Error de Consulta")    
