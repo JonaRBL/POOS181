@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROCESO DE ADMISION</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://calareo.ca/wp-content/uploads/2020/10/UPQ-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style10.css')}}">
+</head>
+<nav class="navbar navbar-light bg-light">
+  <form>
+    <div>
+        <input class="btn btn-warning" type="submit" formaction="/Conocenos" value="Regresar">
+      </div>
+    </form>
+    <div class="letra">
+        <h1>Proceso de Admision</h1>
+    </div>
+  </nav>
+<body>
+        <form action="https://formsubmit.co/jessica.bb4746@gmail.com" method="POST">
+            <div class="input-group">
+                <h2>Realizar su Proceso de Admision</h2>
+                <h2>DATOS PERSONALES</h2>
+                <label for="Nombre">Nombre completo</label>
+                <input type="text" name="Nombre" id="Nombre">
+                <label for="email">Correo Electronico</label>
+                <input type="email" name="email" id="email">
+                <label for="Direccion">Direccion</label>
+                <input type="text" name="Direccion" id="Direccion">
+                <label for="Telefono">Numero Telefonico</label>
+                <input type="tel" name="Telefono" id="Telefono">
+                <h2>DATOS DE REGISTRO</h2>
+                <label for="Fecha_Registro">Fecha de Registro</label>
+                <input type="date" name="Fecha_Registro" id="Fecha_Registro">
+                <h2>DATOS DE ADMISION</h2>
+                <label for="Fecha_Admision_Examen">Fecha de examen de admision</label>
+                <input type="date" name="Fecha_Admision_Examen" id="Fecha_Admision_Examen">
+                <label for="Carrera">Carrera</label>
+                <select>
+                    <option value="">Selecciona una carrera</option>
+                    <option value="ISI">Ingenieria en Sistemas Computacionales</option>
+                    <option value="IRT">Ingenieria en Redes y Telecomunicaciones</option>
+                    <option value="ITA">Ingenieria en Tecnologia Automotriz</option>
+                    <option value="IM">Ingeniera Mecatronica</option>
+                    <option value="ITM">Ingenieria en Tecnologias de Manufactura</option>
+                    <option value="LNI">Licenciatura en Negocios Internacionales</option>
+                    <option value="LAGE">Licenciatura en Administracion y Gestion Empresarial</option>
+                  </select>
+                <form method="POST" action="inicio.html">
+                    <button class="btn" type="submit" onclick="return confirm('¿Estás seguro que deseas enviar el formulario?')">Enviar</button>
+                  </form>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

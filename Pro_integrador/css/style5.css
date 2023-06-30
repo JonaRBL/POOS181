@@ -1,0 +1,15 @@
+body {
+    background-image: url("../Edificios/edificioBC.jpg");
+    background-position: center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    background-color:cornflowerblue;
+}
+
+.letra {
+    color: rgb(112, 18, 18);
+    padding:20 px;
+    font-size: 30px;
+    text-align: center;
+}

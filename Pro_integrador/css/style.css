@@ -1,0 +1,107 @@
+:root{
+    --morado:#3d85c6;
+    --moradoObscuro:#991f35;
+    --moradoGris:#0b5394;
+    --blanco:#fff;
+    --fuente:'Quicksand',sans-serif;
+    }
+    html{
+        box-sizing: border-box;
+    }
+    *,::after,*::before{
+        box-sizing: inherit;
+    }
+    body{
+        font-family: var(--fuente);
+        background-color: var(--morado);
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+    .contenedor{
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 95%;
+    }
+    .imagen-formulario{
+        background-image: url('../imagenes/registro.png');
+        background-position: center center;
+        background-size: cover;
+        height: 200px;
+      flex: 0 0 calc(60%);
+      position: relative;
+    }
+    .imagen-formulario::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    @media(min-width:768px){
+        .imagen-formulario{
+            height: auto;
+            background-position: right;
+        }
+    }
+    @media(min-width:768px){
+        .contenedor-formulario{
+            display: flex;
+            background-position: center;
+        }
+    }
+    .formulario{
+        padding: 50px;
+        background-color: var(--moradoObscuro);
+    }
+    .texto-formulario h2,.input label, .password-olvidada a,.texto-formulario p{
+        color: var(--blanco);
+    }
+    .texto-formulario h2{
+        font-size: 50px;
+        text-align: center;
+    }
+    .texto-formulario p{
+        font-size: 22px;
+    text-align: center;
+    }
+    .input label{
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+    }
+    .input input{
+        width: 100%;
+        padding: 10px 16px;
+        border-radius: 5px;
+        outline: none;
+    }
+    .password-olvidada a{
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 22px;
+    }
+    .input input[type="submit"]{
+        background-color: var(--moradoGris);
+        color: var(--blanco);
+        font-size: 22px;
+        font-weight: bold;
+        border: none;
+        margin-top: 20px;
+        transition: background-color .3s ease-in-out;
+    }
+    .input input[type="submit"]:hover{
+        cursor: pointer;
+        background-color: var(--morado);
+    }
+    
+    body {
+        background-image: url("../imagenes/Fregistro.jpg");
+        background-position: center;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+        background-color:cornflowerblue;
+    }

@@ -1,0 +1,78 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:url("../Edificios/Prcadmicion.jpg") ;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 600px;
+    background-color: #df6161;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+h2{
+    color: #ffff;
+    font-size: 35px;
+}
+label{
+    font-size: 20px;
+    color: #202123;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+input{
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 2px solid #959AAB;
+    color: #000000;
+    outline: none;
+}
+select {
+    background-color: #fff;
+    color: #333;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    margin-bottom: 20px;
+  }
+  
+  option {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+  }
+  .btn {
+    background-color: #4CAF50; 
+    border: none;
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 10px; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .btn:hover {
+    background-color: #3e8e41; 
+  }
