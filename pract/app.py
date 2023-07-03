@@ -19,7 +19,7 @@ def index():
     CC = mysql.connection.cursor()
     CC.execute('select * from tbalbums')
     conAlbums = CC.fetchall()
-    print(conAlbums)
+    #print(conAlbums)
     return render_template('index.html',listAlbums = conAlbums)
 
 #ruta http:localhost:5000/guardar tipo POST para Insert
@@ -39,6 +39,17 @@ def guardar():
         
     flash('El album fue agregado correctamente')
     return redirect(url_for('index'))
+
+@app.route('/editar/<id>')
+def editar(id):
+    CID = mysql.connection.cursor()
+    CID.execute('select * from tbalbums where id = %s', (id,))
+    consulId = CID.fetchone()
+    return render_template('editarAlbum.html', album = consulId)
+
+@app.route('/actualizar/<id>', methods=['POST'])
+def actualizar(id):
+    
 
 @app.route('/eliminar')
 def eliminar():
