@@ -49,7 +49,17 @@ def editar(id):
 
 @app.route('/actualizar/<id>', methods=['POST'])
 def actualizar(id):
-    
+    if request.method == 'POST':
+        vartitulo = request.form['txtTitulo']
+        varartista = request.form['txtArtista']
+        varanio = request.form['txtAnio']
+        
+        CA = mysql.connection.cursor()
+        CA.execute('update tbalbums set titulo= %s,artista= %s,anio= %s where id= %s', (vartitulo,varartista,varanio,id))
+        mysql.connection.commit()
+        
+    flash('El album se actualizo correctamente'+' '+ vartitulo)
+    return redirect(url_for('index'))
 
 @app.route('/eliminar')
 def eliminar():
