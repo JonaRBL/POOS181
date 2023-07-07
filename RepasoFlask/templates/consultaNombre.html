@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruteria La toronjita</title>
+</head>
+<body>
+    <h1>Consulta por Nombre</h1>
+    <br>
+       <form action="/consultaNom" method="POST">
+        <input type="text" name="txtBuscar" placeholder="Ingresar fruta">
+        <button type="submit"> Buscar </button>
+      </form>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</th>
+                <td>Fruta</th>
+                <td>Temporada</th>
+                <td>Precio</th>
+                <td>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fru in listFruts %}
+                <tr>
+                    <td>{{fru.0}}</td>
+                    <td>{{fru.1}}</td>
+                    <td>{{fru.2}}</td>
+                    <td>{{fru.3}}</td>
+                    <td>{{fru.4}}</td>
+                </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    <br>
+    <form action="/consulta">
+        <button type="submit"> Regresar </button>
+    </form>
+</body>
+</html>

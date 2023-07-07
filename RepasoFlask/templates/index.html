@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruteria La toronjita</title>
+</head>
+
+<body>
+    <h1>Fruteria La toronjita</h1>
+
+    {% with mensajes = get_flashed_messages() %}
+        {% if mensajes %}
+            {% for msj in mensajes %}
+                <h3> {{ msj }} </h3>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <form action="/guardar" method="POST">
+
+        <input type="text" name="txtFruta" placeholder="Ingresa fruta">
+        <input type="text" name="txtTemporada" placeholder="Ingresa temporada">
+        <input type="decimal" name="txtPrecio" placeholder="Ingresa precio">
+        <input type="number" name="txtStock" placeholder="Ingresa stock">
+
+        <button type="submit"> Guardar </button>
+
+    </form>
+    <br>
+    <form action="/consulta">
+        <button type="submit"> Consultar </button>
+    </form>
+    <br>
+</body>
+
+</html>

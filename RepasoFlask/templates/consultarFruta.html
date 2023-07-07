@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Consulta de Frutas</title>
+</head>
+
+<body>
+    <h1> Frutas Guardados</h1>
+    {% with mensajes = get_flashed_messages() %}
+        {% if mensajes %}
+            {% for msj in mensajes %}
+                <h3> {{ msj }} </h3>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <table>
+        <thead>
+            <tr>
+                <td> ID </td>
+                <td> Fruta </td>
+                <td> Temporada </td>
+                <td> Precio </td>
+                <td> Stock </td>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for fru in listFrut %}
+                <tr>
+                    <td> {{fru.0}} </td>
+                    <td> {{fru.1}} </td>
+                    <td> {{fru.2}} </td>
+                    <td> {{fru.3}} </td>
+                    <td> {{fru.4}} </td>
+                    <td>
+                        <a href=/editar/{{fru.0}} > Editar </a>
+                        <a href=/pasar/{{fru.0}}> Borrar </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <form action="/consultan">
+        <button type="submit"> Consultar por Nombre </button>
+    </form>
+    <br>
+    <form action="/">
+        <button type="submit"> Regresar </button>
+    </form>
+</body>
+
+</html>
+
+
+
