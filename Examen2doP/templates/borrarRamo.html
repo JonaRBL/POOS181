@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Borrar Ramo </title>
+</head>
+<body>
+    <h1> Ramo a borrar: </h1>
+    <h3> ¿Seguro que desea eliminar este registro? </h3>
+    <form action="/borrar/{{ramo.0}}" method="POST">
+
+        <input type="text" name="txtNombre" value="{{ramo.1}}" disabled>
+        <input type="text" name="txtCantdidad" value="{{ramo.2}}" disabled>
+        <input type="number" name="txtPrecio" value="{{ramo.3}}" disabled>
+        <br><br>
+        <button type="submit"> Eliminar </button>
+    </form>
+    <br>
+    <form action="/consultar">
+        <button type="submit"> Cancelar </button>
+    </form>
+</body>
+</html>

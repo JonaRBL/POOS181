@@ -35,5 +35,23 @@ def consulta():
     conRamos = CC.fetchall()
     return render_template('consultarRamo.html',listRam = conRamos)
 
+@app.route('/datos/<id>')
+def datos(id):
+    CD = mysql.connection.cursor()
+    CD.execute('select * from tbflores where id = %s',(id,))
+    consultaR = CD.fetchone()
+    
+    return render_template('borrarRamo.html', ramo = consultaR)
+
+@app.route('/borrar/<id>', methods=['POST'])
+def borrar(id):
+    if request.method == 'POST':
+        CB = mysql.connection.cursor()
+        CB.execute('delete from tbflores where id= %s', (id))
+        mysql.connection.commit()
+    
+    flash('El Ramo se elimino correctamente')
+    return redirect(url_for('consulta'))
+    
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
