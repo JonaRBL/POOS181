@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Consultar Ramos </title>
+</head>
+<body>
+    <h1> Ramos registrados </h1>
+    {% with mensajes = get_flashed_messages() %}
+        {% if mensajes %}
+            {% for msj in mensajes %}
+                <h3> {{ msj }} </h3>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <table>
+        <thead>
+            <tr>
+                <td> ID </td>
+                <td> Ramo </td>
+                <td> cantidad </td>
+                <td> Precio </td>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for ram in listRam %}
+                <tr>
+                    <td> {{ram.0}} </td>
+                    <td> {{ram.1}} </td>
+                    <td> {{ram.2}} </td>
+                    <td> {{ram.3}} </td>
+                    <td> {{ram.4}} </td>
+                    <td>
+                        <a href=/pasar/{{ram.0}}> Borrar </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <form action="/">
+        <button type="submit"> Regresar </button>
+    </form>
+</body>
+</html>
