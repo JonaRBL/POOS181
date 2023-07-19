@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
+{% extends 'plantilla.html' %}   
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Album</title>
-</head>
-
-<body>
-    
+{% block body %}
     <br>
     <br>
     <h1>Gestion de albums</h1>
@@ -61,6 +53,4 @@
             {% endfor %}
         </tbody>
     </table>
-</body>
-
-</html>
+{% endblock %}

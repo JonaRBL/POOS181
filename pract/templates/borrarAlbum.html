@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Borrar Album </title>
-</head>
-<body>
+{% extends 'plantilla.html' %}   
+
+{% block body %}
     <h1> Album a borrar: </h1>
     <br>
     <h3> ¿Seguro que desea eliminar este album? </h3>
@@ -21,5 +16,4 @@
     <form action="/">
         <button type="submit"> Cancelar </button>
     </form>
-</body>
-</html>
+{% endblock %}
