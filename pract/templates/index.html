@@ -5,14 +5,13 @@
     <div class="mt-5 mb-5">
         <h1 class="display-1 text-center">Gestion de albums</h1>
     </div>
-
-    {% with mensajes = get_flashed_messages() %}
-        {% if mensajes %}
-            {% for msj in mensajes %}
-                <h3> {{ msj }} </h3>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
+        {% with mensajes = get_flashed_messages() %}
+            {% if mensajes %}
+                {% for msj in mensajes %}
+                    <h3> {{ msj }} </h3>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
 
     <div class="container">
         <div class="row">
@@ -55,10 +54,10 @@
                                     <td> {{alb.2}} </td>
                                     <td> {{alb.3}} </td>
                                     <td>
-                                        <a href=/editar/{{alb.0}} class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
+                                        <a href=/editar/{{alb.0}} class="btn btn-outline-warning"><i class="bi bi-pencil-square"></i></a>
                                     </td>
                                     <td>
-                                        <a href=/pasar/{{alb.0}} class="btn btn-danger"> <i class="bi bi-trash"></i> </a>
+                                        <a href=/pasar/{{alb.0}} class="btn btn-outline-danger"> <i class="bi bi-trash"></i> </a>
                                     </td>
                                 </tr>
                             {% endfor %}

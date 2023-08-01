@@ -1,9 +1,18 @@
 #importación del framework
 from flask import Flask, render_template, request, redirect, url_for, flash
+import re
 from flask_mysqldb import MySQL
+from werkzeug.routing import BaseConverter
 
 #Inicializacion del APP
 app = Flask(__name__)
+
+class RegexConverter(BaseConverter):
+    def __init__(self, url_map, *items):
+        super().__init__(url_map)
+        self.regex = items[0]
+
+app.url_map.converters['re'] = RegexConverter
 
 #Configuracion de la conexion
 app.config['MYSQL_HOST'] = 'localhost'
@@ -61,7 +70,7 @@ def actualizar(id):
     flash('El album se actualizo correctamente'+' '+ vartitulo)
     return redirect(url_for('index'))
 
-@app.route('/pasar/<id>')
+@app.route('/pasar/<int:id>')
 def pasar(id):
     CAP = mysql.connection.cursor()
     CAP.execute('select * from tbalbums where id = %s', (id,))
@@ -72,7 +81,7 @@ def pasar(id):
 def eliminar(id):
     if request.method == 'POST':
         CA = mysql.connection.cursor()
-        CA.execute('delete from tbalbums where id= %s', (id))
+        CA.execute('delete from tbalbums where id= %s', (id,))
         mysql.connection.commit()
     
     flash('El album se elimino correctamente')

@@ -1,22 +1,32 @@
 {% extends 'plantilla.html' %}   
 
 {% block body %}
+    <div class="mt-5 mb-5">
+        <h1 class="display-1 text-center"> Album a editar: </h1>
+    </div>
+    
+    <div class="container text-center" style="width: 300px;">
+        <div class="card card-body  mb-2">
+            <form action="/actualizar/{{album.0}}" method="POST">
+                <div class="mb-3">
+                    <input type="text" name="txtTitulo" value="{{album.1}}">
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="txtArtista" value="{{album.2}}">
+                </div>
+                <div class="mb-3">
+                    <input type="number" name="txtAnio" value="{{album.3}}">
+                </div>
 
-    <h1 class="display-1 text-center"> Album a editar: </h1>
-    <br>
-    <br>
+                <button type="submit" class="btn btn-outline-primary"> Actualizar </button>
 
-    <form action="/actualizar/{{album.0}}" method="POST">
-
-        <input type="text" name="txtTitulo" value="{{album.1}}">
-        <input type="text" name="txtArtista" value="{{album.2}}">
-        <input type="number" name="txtAnio" value="{{album.3}}">
-
-        <button type="submit"> Actualizar </button>
-
-    </form>
-    <br>
-    <form action="/">
-        <button type="submit"> Regresar </button>
-    </form>
+            </form>
+        </div>
+        <div class="text-center mb-5">
+            <form action="/" class="text-center mb-3">
+                <button type="submit" class="btn btn-outline-primary"> Regresar </button>
+            </form>
+        </div>
+    </div>
+    
 {% endblock %}

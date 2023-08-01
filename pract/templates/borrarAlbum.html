@@ -1,19 +1,31 @@
 {% extends 'plantilla.html' %}   
 
 {% block body %}
-    <h1> Album a borrar: </h1>
-    <br>
-    <h3> ¿Seguro que desea eliminar este album? </h3>
-    <form action="/eliminar/{{album2.0}}" method="POST">
+    <div class="mt-5 mb-5">
+        <h1 class="display-1 text-center"> Album a borrar: </h1>
+        <h3 class="display-5 text-center"> ¿Seguro que desea eliminar este album? </h3>
+    </div>
+    <div class="container text-center" style="width: 300px;">
+        <div class="card card-body  mb-2">
+            <form action="/eliminar/{{album2.0}}" method="POST">
+                <div class="mb-3">
+                    <input type="text" name="txtTitulo" value="{{album2.1}}" disabled>
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="txtArtista" value="{{album2.2}}" disabled>
+                </div>
+                <div class="mb-3">
+                    <input type="number" name="txtAnio" value="{{album2.3}}" disabled>
+                </div>
 
-        <input type="text" name="txtTitulo" value="{{album2.1}}" disabled>
-        <input type="text" name="txtArtista" value="{{album2.2}}" disabled>
-        <input type="number" name="txtAnio" value="{{album2.3}}" disabled>
-
-        <button type="submit"> Eliminar </button>
-    </form>
-    <br>
-    <form action="/">
-        <button type="submit"> Cancelar </button>
-    </form>
+                <button type="submit" class="btn btn-outline-primary"> Eliminar </button>
+            </form>
+        </div>
+        <div class="text-center mb-5">
+            <form action="/" class="text-center mb-3">
+                <button type="submit" class="btn btn-outline-primary"> Cancelar </button>
+            </form>
+        </div>
+    </div>
+    
 {% endblock %}
