@@ -5,15 +5,22 @@
     <div class="mt-5 mb-5">
         <h1 class="display-1 text-center">Gestion de albums</h1>
     </div>
+
+    <div class="container">
+
         {% with mensajes = get_flashed_messages() %}
             {% if mensajes %}
                 {% for msj in mensajes %}
-                    <h3> {{ msj }} </h3>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>{{ msj }} </strong>
+                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+
+                    <script> Swal.fire('Good job!','You clicked the button!','success')</script>
                 {% endfor %}
             {% endif %}
         {% endwith %}
 
-    <div class="container">
         <div class="row">
             <div class="col-md-5">
                 <div class="card card-body  mb-5">

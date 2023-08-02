@@ -40,14 +40,17 @@ def guardar():
         Vtitulo = request.form['txtTitulo']
         Vartista = request.form['txtArtista']
         Vanio = request.form['txtAnio']
-        
+        if Vtitulo == "" or Vartista== "" or Vanio == "":
+            flash('No puedes enviar campos vacios')
+            return redirect(url_for('index'))
+        else:
         #conectar a la bd y ejecutar el insert
-        CS = mysql.connection.cursor()
-        CS.execute('insert into tbalbums(titulo,artista,anio) values(%s,%s,%s)',(Vtitulo,Vartista,Vanio))
-        mysql.connection.commit()
+            CS = mysql.connection.cursor()
+            CS.execute('insert into tbalbums(titulo,artista,anio) values(%s,%s,%s)',(Vtitulo,Vartista,Vanio))
+            mysql.connection.commit()
         
-    flash('El album fue agregado correctamente')
-    return redirect(url_for('index'))
+            flash('El album fue agregado correctamente')
+            return redirect(url_for('index'))
 
 @app.route('/editar/<id>')
 def editar(id):
