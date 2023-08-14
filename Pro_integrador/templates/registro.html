@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Date el ROL UPQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://calareo.ca/wp-content/uploads/2020/10/UPQ-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+
+
+    <div class="contenedor-formulario contenedor">
+        <div class="imagen-formulario">
+
+        </div>
+
+    <form class="formulario" action="/registrar" method="POST">
+        <div class="texto-formulario">
+            <h2>Bienvenido</h2>
+            <p>Registra tu acceso UPQ</p>
+        <br>
+        {% with mensajes= get_flashed_messages()%}
+            {%if mensajes%}
+                {%for msj in mensajes%}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong> {{msj}} </strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith%}
+        <br>
+        </div>
+        <div class="input">
+            <label for="Nombre">Nombre completo</label>
+            <input placeholder="Ingresa nombre" type="text" name="txtnombre">
+        </div>
+        <div class="input">
+            <label for="Correo">Correo electrónico:</label>
+            <input type="email" placeholder="Ingresa tu correo" name="txtcorreo">
+          </div>
+        <br>
+        <div class="text-center">
+            <input class="btn btn-primary" type="submit" value="Entrar">
+          </div>
+    </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

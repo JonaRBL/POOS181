@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="{{url_for('static',filename='imagenes/logo upq.png')}}" type="image/x-icon">
+    <title>La Kafe UPQ</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style1.css')}}">
+</head>
+<body>
+    <nav class="navbar navbar-light" style="background-color: #7f0606;">
+        <div>
+            <a class="btn btn-light" href=/Conocenos><i class="bi bi-arrow-return-left"></i> Regresar</a>
+          </div>
+        <div class="letra">
+            <h1>La Kafe UPQ</h1>
+        </div>
+      </nav>
+
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Información
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>
+                Nuestra cafeteria grande se puede usar para eventos importantes en la universidad ya que contamos con un pequeño auditorio.
+              </p>
+              <p>
+                Áreas:
+                Oficinas administrativas del servicio de comedor.
+              </p>
+              <p>
+                Espacios en planta baja:
+                Cocina, cafetería, anexos de cafetería, OXXO, sanitarios para
+                hombres y mujeres, y un sanitario para hombres y uno para 
+                mujeres adecuado para personas con discapacidad.
+              </p>
+              <p>
+                Espacios en sótano:
+                Almacén general.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      <div class="imagenes">
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{{ url_for('static', filename='imagenes/Cafeteria/cafeteria1.jpg') }}" class="d-block w-100">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Área de comida exterior</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cafeteria/cafe1.jpg') }}"  class="d-block w-100">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Área de comida interna</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cafeteria/cafe2.png') }}"  class="d-block w-100">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Aula multiusos</h5>
+                <p>Esta aula tiene muchos usos, generalmente se usa para los talleres de karate, 
+                  pero igual puede ser area de comida o juntas.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cafeteria/cafe3.png') }}"  class="d-block w-100">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>OXXO</h5>
+                <p>Contamos con nuestro OXXO personal.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cafeteria/cafeteria.jpg') }}"  class="d-block w-100">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Logo La KafeUPQ</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cafeteria/5.jpg') }}"  class="d-block w-100">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cafeteria/6.jpg') }}"  class="d-block w-100">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+  
+      <video class="imagenes" controls>
+        <source src="{{ url_for('static', filename='videos/Cafeteria.mp4') }}" type="video/mp4">
+      </video>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

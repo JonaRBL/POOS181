@@ -1,0 +1,63 @@
+
+body {
+    background-image: url("../imagenes/Finicio.png");
+    background-position: center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    background-color:cornflowerblue;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+ }
+ 
+ .cuadro {
+   position: relative;
+   width: 300px;
+   height: 200px;
+   background-size: cover;
+   margin: 10px;
+   transition: all 0.3s ease;
+ }
+ .texto {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba(0, 0, 0, 0.7);
+   color: #fff;
+   padding: 5px;
+   text-align: center;
+   font-size: 20px;
+   opacity: 0;
+   transform: translateY(100%);
+   transition: opacity 0.3s, transform 0.3s;
+}
+ .cuadro:hover .texto {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+ .no-span {
+   display: no-repeat;
+ }
+ 
+ .cuadro:hover {
+    transform: scale(1.1);
+ }
+
+
+ .letra {
+    color: rgb(255, 255, 255);
+    padding:30 px;
+    font-size: 40px;
+    text-align: center;
+}
+.video {
+   width: 300px;
+   height: 200px;
+   margin: 10px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROCESO DE ADMISION</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{url_for('static',filename='imagenes/logo upq.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style10.css')}}">
+</head>
+<nav class="navbar navbar-light" style="background-color: #7f0606;">
+    <div>
+        <a class="btn btn-light" href=/Conocenos>Regresar</a>
+      </div>
+    <div class="letra">
+        <h1>Proceso de Admision</h1>
+    </div>
+  </nav>
+<body>
+        <form action="/guardar-proceso" method="POST">
+        {% with mensajes= get_flashed_messages()%}
+            {%if mensajes%}
+                {%for msj in mensajes%}
+                <h3 style="color: white;"> {{msj}} </h3>
+                {% endfor %}
+            {% endif %}
+        {% endwith%}
+            <div class="input-group">
+                <h2>Realiza tu Proceso de Admision</h2>
+                <h2>DATOS PERSONALES</h2>
+                <br>
+                <label for="Nombre">Nombre completo</label>
+                <input placeholder="Ingresa nombre" type="text" name="txtNombre">
+                <label for="email">Correo Electronico</label>
+                <input placeholder="Ingresa un correo" type="email" name="txtemail">
+                <label for="Direccion">Direccion</label>
+                <input placeholder="Ingresa una Direccion" type="text" name="txtDireccion">
+                <label for="Telefono">Numero Telefonico</label>
+                <input placeholder="Ingresa un Telefono (10 digitos)" type="text" name="txtTelefono">
+                <h2>DATOS DE REGISTRO</h2>
+                <br>
+                <label for="Fecha_Registro">Fecha de Registro</label>
+                <input type="date" name="Fecha_Registro">
+                <h2>DATOS DE ADMISION</h2>
+                <br>
+                <label for="Carrera">Carrera</label>
+                <select name="txtcarrera">
+                    <option value="">Selecciona una carrera</option>
+                    <option value="ISI">Ingenieria en Sistemas Computacionales</option>
+                    <option value="IRT">Ingenieria en Redes y Telecomunicaciones</option>
+                    <option value="ITA">Ingenieria en Tecnologia Automotriz</option>
+                    <option value="IM">Ingeniera Mecatronica</option>
+                    <option value="ITM">Ingenieria en Tecnologias de Manufactura</option>
+                    <option value="LNI">Licenciatura en Negocios Internacionales</option>
+                    <option value="LAGE">Licenciatura en Administracion y Gestion Empresarial</option>
+                  </select>
+                <button class="btn btn-primary" class="text-center" type="submit">Enviar</button>
+            </div>
+        </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

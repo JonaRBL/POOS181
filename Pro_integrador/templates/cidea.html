@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="{{url_for('static',filename='imagenes/logo upq.png')}}" type="image/x-icon">
+    <title>CIDEA</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style1.css')}}">
+</head>
+<body>
+    <nav class="navbar navbar-light" style="background-color: #7f0606;">
+        <div>
+            <a class="btn btn-light" href=/Conocenos> <i class="bi bi-arrow-return-left"></i> Regresar</a>
+          </div>
+        <div class="letra">
+            <h1>CIDEA</h1>
+        </div>
+      </nav>
+
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Información
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>Un edificio muy innovador ya que en este se despliegan las mejores ideas</p>
+              <p>
+                - Áreas en planta baja:
+                Oficinas Administrativas del Programa Educativo de Ingeniería en
+                Tecnología Automotriz, Oficinas administrativas de Talleres y
+                Laboratorios Pesados, Oficina Brose.
+              </p>
+              <p>
+                - Áreas en planta alta:
+                Oficinas Administrativas de la Dirección de Investigación y 
+                Posgrado, Dirección de Planeación, Órgano Interno de Control.
+              </p>
+              <p> 
+                - Espacios en planta baja:
+                Laboratorio de manufactura aditiva e ingeniería inversa, 4 aulas
+                para la impartición de clases, sanitarios para hombres y mujeres, y un sanitario para hombres 
+                y uno para mujeres adecuado para personas con discapacidad.
+              <p>
+                - Espacios en planta alta:
+                Sala de juntas de CIDEA, Sala de acuerdos CIDEA.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      <div class="imagenes">
+        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{{ url_for('static', filename='imagenes/Cidea/cideas.jpg') }}" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cidea/cidea1.jpg') }}" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cidea/1.jpg') }}"  class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cidea/2.jpg') }}"  class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cidea/SALA_CIDEA3.jpg') }}"  class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cidea/3.jpg') }}"  class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cidea/4.jpg') }}"  class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cidea/5.jpg') }}"  class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cidea/6.jpg') }}"  class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='imagenes/Cidea/7.jpg') }}"  class="d-block w-100">
+            </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Atrás</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </div>
+      <video class="imagenes" controls>
+        <source src="{{ url_for('static', filename='videos/Fideas.mp4') }}" type="video/mp4">
+      </video>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

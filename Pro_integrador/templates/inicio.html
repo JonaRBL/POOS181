@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="{{url_for('static',filename='imagenes/logo upq.png')}}" type="image/x-icon">
+    <title>Conocenos</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style2.css')}}">
+</head>
+<body>
+    <nav class="navbar navbar-light" style="background-color: #7f0606">
+        <h1 class="letra">Conocenos</h1>
+        <div class="text-center">
+            <a class="btn btn-outline-info" href="https://www.upq.mx/" target="_blank"> Visita la página UPQ !!!</a>
+        </div>
+        <br>
+        <form action=/>
+            <button class="btn btn-warning"> <i class="bi bi-box-arrow-left"></i>  Salir</button>
+        </form>
+    </nav>
+
+    <div class="container">
+        <a href=/EdificioA class="cuadro" style="background-image: url({{ url_for('static', filename='imagenes/EdificioA/edificioA.jpg') }});">
+            <span class="texto">Edificio A</span>
+        </a>
+
+        <a href=/EdificioB class="cuadro" style="background-image:url({{ url_for('static', filename='imagenes/EdificioB/edificioB.jpg') }});">
+            <span class="texto">Edificio B</span>
+        </a>
+
+        <a href=/EdificioC class="cuadro" style="background-image:url({{ url_for('static', filename='imagenes/EdificioC/edificioC.jpg') }});">
+            <span class="texto">Edificio C</span>
+        </a>
+
+        <a href=/CIDEA class="cuadro" style="background-image:url({{ url_for('static', filename='imagenes/Cidea/cidea.jpg') }});">
+            <span class="texto">CIDEA</span>
+        </a>
+
+        <a href=/CAPTA class="cuadro" style="background-image: url({{ url_for('static', filename='imagenes/Capta/capta.jpg') }});">
+            <span class="texto">CAPTA</span>
+        </a>
+
+        <div>
+            <iframe width="640px" height="400px" allowvr="yes" allow="xr-spatial-tracking" allowfullscreen="yes" frameborder="0" src="https://orbix360.com/t/vlftW0kFtnbYBQnBTj1AveHxe8k2/4916527046328320/date-el-rol-por-la-upq?embed=yes"></iframe>
+        </div>
+
+        <a href=/LT class="cuadro" style="background-image:url({{ url_for('static', filename='imagenes/Lt1/edificioLT1.jpg') }});">
+            <span class="texto">Edificio LT1</span>
+        </a>
+
+        <a href=/Biblioteca class="cuadro" style="background-image: url({{ url_for('static', filename='imagenes/Biblioteca/biblioteca.png') }});">
+            <span class="texto">Biblioteca</span>
+        </a>
+
+        <a href=/LakafeUPQ class="cuadro" style="background-image:url({{ url_for('static', filename='imagenes/Cafeteria/cafeteria.jpg') }});">
+            <span class="texto">La Kafe UPQ</span>
+        </a>
+
+        <a href=/Talleres class="cuadro" style="background-image:url({{ url_for('static', filename='imagenes/Talleres/edificioT.jpg') }});">
+            <span class="texto">Edificio Talleres</span>
+        </a>
+
+        <a href=/Canchas class="cuadro" style="background-image:url({{ url_for('static', filename='imagenes/Canchas/canchas.png') }});">
+            <span class="texto no-span">Canchas</span>
+        </a>
+     </div>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+     </body>
+</html>

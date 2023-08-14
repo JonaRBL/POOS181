@@ -1,0 +1,91 @@
+body {
+  background-image: url("../imagenes/registro.png");
+  background-position: center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:cover;
+  background-color:cornflowerblue;
+}
+
+.letra {
+  color: rgb(255, 255, 255);
+  padding:30 px;
+  font-size: 40px;
+  text-align: center;
+}
+
+form{
+  padding: 50px 55px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  width: 600px;
+  margin: auto;
+  background-color: #250e80;
+}
+.input-group{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+h2{
+  color: #ffff;
+  font-size: 35px;
+}
+label{
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+input{
+  padding: 17px 25px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 2px solid #959AAB;
+  color: #000000;
+  outline: none;
+}
+select {
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+option {
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+}
+.btn {
+  background-color: #4CAF50; /* Color de fondo */
+  border: none; /* No mostramos borde */
+  color: white; /* Color de la fuente */
+  padding: 15px 32px; /* Espacio alrededor del texto */
+  text-align: center; /* AlineaciÃ³n del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Ajuste el ancho al contenido */
+  font-size: 16px; /* TamaÃ±o de la fuente */
+  margin: 4px 2px; /* margen exterior */
+  cursor: pointer; /* Cambiamos el cursor cuando estamos encima */
+  border-radius: 10px; /* Borde redondeado */
+  transition: background-color 0.3s ease; /* TransiciÃ³n suave al cambiar el color de fondo */
+}
+
+.btn:hover {
+  background-color: #3e8e41; /* Cambiamos el color de fondo cuando hover */
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
